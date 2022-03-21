@@ -8,12 +8,7 @@ import (
 	"service-backend/models"
 
 	"github.com/gin-gonic/gin"
-	"github.com/jinzhu/gorm"
 )
-
-type APIEnv struct {
-	DB *gorm.DB
-}
 
 func (a *APIEnv) GetBuyers(c *gin.Context) {
 	CorsSetup(c)
@@ -102,9 +97,4 @@ func (a *APIEnv) UpdateBuyer(c *gin.Context) {
 		return
 	}
 	a.GetBuyer(c)
-}
-
-func CorsSetup(c *gin.Context) {
-	c.Header("Access-Control-Allow-Origin", "*")
-	c.Header("Access-Control-Allow-Headers", "access-control-allow-origin, access-control-allow-headers")
 }
