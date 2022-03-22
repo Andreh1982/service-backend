@@ -44,6 +44,12 @@ func HandleRequest() {
 	router.PUT("/updateseller/:id", api.UpdateSeller)
 	router.DELETE("/delseller/:id", api.DeleteSeller)
 
+	router.GET("/products", api.GetProducts)
+	router.GET("/product/:id", api.GetProduct)
+	router.POST("/addproduct", api.CreateProduct)
+	router.PUT("/updateproduct/:id", api.UpdateProduct)
+	router.DELETE("/delproduct/:id", api.DeleteProduct)
+
 	shared.LogCustom([]string{"Iniciando a API"}, "info")
 
 	router.Run(":9990")

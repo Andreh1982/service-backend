@@ -12,6 +12,7 @@ type Product struct {
 	Nome       string `json:"nome"`
 	Descricao  string `json:"descricao"`
 	Quantidade int    `json:"quantidade"`
+	Seller     int    `json:"seller"`
 }
 
 type Seller struct {

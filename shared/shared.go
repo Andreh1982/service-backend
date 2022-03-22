@@ -12,7 +12,6 @@ var debug bool
 func LogCustom(message []string, errorlevel string) {
 
 	if errorlevel == "info" {
-		// ZapLogger.Info(message[0])
 		Info(message[0])
 	} else if errorlevel == "warn" {
 		Debug(message[0])
